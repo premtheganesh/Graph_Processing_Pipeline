@@ -120,16 +120,6 @@ You should see new nodes/relationships appearing and algorithm results updating 
 - Port-forward: `kubectl port-forward svc/my-neo4j 7474:7474 7687:7687`
 - Or run: `minikube service list`
 
-## Housekeeping
-
-### .gitignore:
-```
-__pycache__/
-.DS_Store
-*.log
-.env
-.env.*
-```
 
 **Note:** Never commit real tokens or passwords. If you ever did, rotate them and scrub history (`git filter-repo` or `BFG`).
 
