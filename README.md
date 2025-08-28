@@ -122,12 +122,3 @@ You should see new nodes/relationships appearing and algorithm results updating 
 
 
 **Note:** Never commit real tokens or passwords. If you ever did, rotate them and scrub history (`git filter-repo` or `BFG`).
-
-## Ideas for Future Work
-- Deploy on managed K8s (EKS/GKE), add monitoring (Prometheus + Grafana).
-- Add more GDS algorithms (community detection, shortest path).
-- Add CI to run Phase-1 ingestion + a smoke test for the GDS calls.
-
-## Author
-Prem Ganesh  
-Graph & Data Engineering enthusiast — building end-to-end data systems with Python, Kafka, and Neo4j.
