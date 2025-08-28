@@ -1,0 +1,42 @@
+# neo4j-values.yaml
+
+acceptLicenseAgreement: "yes"
+
+neo4j:
+  name: neo4j
+  edition: community
+  password: changeme
+  resources:
+    cpu: "0.5"
+    memory: "2Gi"
+
+volumes:
+  data:
+    mode: dynamic 
+    dynamic:
+      storageClassName: standard
+      accessModes:
+        - ReadWriteOnce
+      requests:
+        storage: 10Gi
+
+services:
+  neo4j:
+    enabled: true
+    type: ClusterIP
+    ports:
+      http:
+        enabled: true
+        port: 7474
+      https:
+        enabled: false
+      bolt:
+        enabled: true
+        port: 7687
+
+readReplica:
+  enabled: false
+
+metrics:
+  enabled: false
+
